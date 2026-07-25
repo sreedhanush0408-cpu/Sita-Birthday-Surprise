@@ -58,8 +58,8 @@ function nextPage(num){
 
     // Show Test Balloons only after the letter page
     if(num === 5){
-        document.querySelector('button[onclick="nextPage(6)"]').style.display = "inline-block";
-    }
+    document.getElementById("balloonBtnContainer").style.display = "none";
+}
 
     // Show One Last Surprise only on Balloon page
     if(num === 6){
@@ -70,10 +70,13 @@ function nextPage(num){
 }
 function openLetter(){
 
-    document.getElementById("letterContent").style.display="block";
-    document.getElementById("openLetter").style.display="none";
+    document.getElementById("letterContent").style.display = "block";
+    document.getElementById("openLetter").style.display = "none";
 
-    // Premium animation
+    document.getElementById("balloonBtnContainer").style.display = "block";
+
+}
+
     const letter = document.getElementById("letterContent");
 
     letter.style.opacity = "0";
@@ -271,5 +274,4 @@ I Likkeeeewwwww Youuuuuu chooooo fuckingggg muchhh Forever. ❤️`;
     document.getElementById("typing").innerHTML="";
     type();
 }
-document.querySelector('button[onclick="nextPage(6)"]').style.display = "none";
-document.getElementById("lastBtn").style.display = "none";
+document.getElementById("lastBtn").style.display = "none";= "none";
